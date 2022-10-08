@@ -2,10 +2,9 @@
 
 int ft_strlen(char *str)
 {
-    int count;
+    int c;
 
-    count = 0;
-    while (str[count])
-        count++;
-    return (count);
+    c = 0;
+    while (str[c++])
+    return (c);
 }
