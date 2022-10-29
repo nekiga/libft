@@ -3,24 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: garibeir < garibeir@student.42lisboa.co    +#+  +:+       +#+        */
+/*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:44:41 by garibeir          #+#    #+#             */
-/*   Updated: 2022/10/24 16:44:42 by garibeir         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:16:20 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    // converting void pointer to unsigned char pointer
-    unsigned char *p = s;
-    // Setting each member of p to c, while decrementing n
-    while (n--)
-    {
-        *p++ = c;
-    }
-    // returns the now changed array
-    return ((void *)p);
+	unsigned char	*p;
+
+	p = s;
+	while (n--)
+	{
+		*p++ = c;
+	}
+	return ((void *)p);
 }

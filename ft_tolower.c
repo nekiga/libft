@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: garibeir < garibeir@student.42lisboa.co    +#+  +:+       +#+        */
+/*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:45:06 by garibeir          #+#    #+#             */
-/*   Updated: 2022/10/24 16:45:33 by garibeir         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:36:22 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c <= 65 && c >= 90)
 		c += 32;

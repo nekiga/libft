@@ -6,15 +6,15 @@
 /*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:45:20 by garibeir          #+#    #+#             */
-/*   Updated: 2022/10/26 18:17:51 by garibeir         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:36:13 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-   	int		i;
+	int	i;
 
 	i = ft_strlen(s);
 	if (c == 0)
@@ -31,13 +31,13 @@ char *ft_strrchr(const char *s, int c)
 int main(void)
 {
    char *s = "Hjgfkfjkello";
-    int c = 108;
+	int c = 108;
 
-    char *p1 = ft_strrchr(s, c);
-    char *p2 = strchr(s, c);
-    
-    printf("Mine: %p\n", p1);
-    printf("Actual: %p\n", p2);
+	char *p1 = ft_strrchr(s, c);
+	char *p2 = strchr(s, c);
+	
+	printf("Mine: %p\n", p1);
+	printf("Actual: %p\n", p2);
 
 }
 */

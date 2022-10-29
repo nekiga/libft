@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: garibeir < garibeir@student.42lisboa.co    +#+  +:+       +#+        */
+/*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:44:35 by garibeir          #+#    #+#             */
-/*   Updated: 2022/10/24 16:44:36 by garibeir         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:15:29 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *src, const void *dest, size_t n)
+void	*ft_memmove(void *src, const void *dest, size_t n)
 {
-  size_t len;
+	size_t	len;
 
-  len = 0;
+	len = 0;
 	if (dest < src)
 	{
 		len = n;

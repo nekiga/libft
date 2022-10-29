@@ -3,16 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: garibeir < garibeir@student.42lisboa.co    +#+  +:+       +#+        */
+/*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:45:00 by garibeir          #+#    #+#             */
-/*   Updated: 2022/10/24 16:45:01 by garibeir         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:39:56 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int ft_strncmp(const char *s1, const char *s, size_t n)
-{
-    
-}
