@@ -10,25 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-char *ft_strchr(char *s,  int c_in)
+char *ft_strchr(const char *s,  int c_in)
 {
-    int i;
     char c;
     
     c = (char) c_in;
-    i = 0;
-    while (s[i] != '\0')
+    while (*s)
     {
-        if (*s == c)
-             return (s);
-        *s++;
-        i++;
+        if (*s++ == c)
+             return ((char *)s);
     }
-    return (s);
+    return (NULL);
 }
 /*
 int main(void)

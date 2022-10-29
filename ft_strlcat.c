@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-unsigned int ft_strlcat(char *dst, const char *src, size_t size)
+size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
     // increment i to end of dst
-    int    i;
-    int    j;
+    size_t    i;
+    size_t    j;
 
     j = 0;
     i = 0;

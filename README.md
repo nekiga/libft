@@ -2,4 +2,4 @@
 
 to do: 
 memcmp
-strstr
+strncmp

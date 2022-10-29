@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void *ft_memset(void *s, int c, unsigned int n)
+void *ft_memset(void *s, int c, size_t n)
 {
     // converting void pointer to unsigned char pointer
     unsigned char *p = s;
@@ -22,5 +22,5 @@ void *ft_memset(void *s, int c, unsigned int n)
         *p++ = c;
     }
     // returns the now changed array
-    return (s);
+    return ((void *)p);
 }

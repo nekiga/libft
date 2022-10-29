@@ -10,19 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void *ft_memchr(const void *s, int c_in, size_t n)
 {
-    int i;
     char *p;
     char c;
 
     p = (char *)s;
     c = (char) c_in;
-    i = 0;
     while (n--)
     {
         if (*p == c)
