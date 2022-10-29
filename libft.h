@@ -6,7 +6,7 @@
 /*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 15:38:08 by garibeir          #+#    #+#             */
-/*   Updated: 2022/10/29 15:39:04 by garibeir         ###   ########.fr       */
+/*   Updated: 2022/10/29 17:15:18 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <string.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
