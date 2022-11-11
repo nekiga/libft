@@ -1,5 +1,4 @@
 # libft
 
 to do: 
-memcmp
-strncmp
+itoa, substr, all the put and bonus

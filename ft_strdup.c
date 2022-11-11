@@ -6,7 +6,7 @@
 /*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 14:25:17 by garibeir          #+#    #+#             */
-/*   Updated: 2022/10/29 15:34:49 by garibeir         ###   ########.fr       */
+/*   Updated: 2022/11/11 18:02:03 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,11 @@ char	*ft_strdup(const char *s)
 		p = malloc((sizeof(char) * l) + 1);
 	if (!p)
 		return (NULL);
-	while (i++ < l)
-			p[i] = s[i];
+	while (i < l)
+	{
+		p[i] = s[i];
+		i++;
+	}
+	p[i] = 0;
 	return ((char *) p);
 }

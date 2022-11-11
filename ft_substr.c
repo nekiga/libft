@@ -6,7 +6,7 @@
 /*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 15:51:56 by garibeir          #+#    #+#             */
-/*   Updated: 2022/11/05 13:57:52 by garibeir         ###   ########.fr       */
+/*   Updated: 2022/11/11 18:07:34 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	while (start != len && start <= i)
 	{
-		p[start] = s[start];
+		p[i] = s[start];
 		start++;
 	}
 	return ((char *)p);

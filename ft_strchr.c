@@ -6,7 +6,7 @@
 /*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:44:45 by garibeir          #+#    #+#             */
-/*   Updated: 2022/10/29 16:12:24 by garibeir         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:52:57 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ char	*ft_strchr(const char *s, int c_in)
 	c = (char) c_in;
 	while (*s)
 	{
-		if (*s++ == c)
+		if (*s == c)
 			return ((char *)s);
+		s++;
 	}
-	if (*s == '\0')
+	if (c == '\0')
 		return ((char *)s);
 	return (NULL);
 }
