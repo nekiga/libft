@@ -6,7 +6,7 @@
 /*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 14:02:47 by garibeir          #+#    #+#             */
-/*   Updated: 2022/11/05 14:29:48 by garibeir         ###   ########.fr       */
+/*   Updated: 2022/11/13 18:18:27 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s3)
 		return (NULL);
 	while (s1[i])
+	{
 		s3[i] = s1[i];
+		i++;
+	}
 	while (s2[j])
-		s3[i] = s2[j++];
+	{
+		s3[i] = s2[j];
+		j++;
+		i++;
+	}
 	s3[i] = '\0';
 	return (s3);
 }

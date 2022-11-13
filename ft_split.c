@@ -6,84 +6,57 @@
 /*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 14:58:26 by garibeir          #+#    #+#             */
-/*   Updated: 2022/11/11 14:17:41 by garibeir         ###   ########.fr       */
+/*   Updated: 2022/11/13 17:29:51 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	countwords(char const *s, char c, int len)
+int	countwords(const char *str, char c)
 {
-	int	i;
-	int	old_i;
 	int	count;
+	int	boolean;
 
-	i = 0;
 	count = 0;
-	while (i < len)
+	boolean = 0;
+	while (*str)
 	{
-		while (i < len)
+		if (*str != c && boolean == 0)
 		{
-			if (s[i] == c)
-				break ;
-			i++;
-		}
-		old_i = i;
-		while (i < len)
-		{
-			if (s[i] != c)
-				break ;
-			i++;
-		}
-		if (old_i < i)
+			boolean = 1;
 			count++;
+		}
+		else if (*str == c)
+			boolean = 0;
+		str++;
 	}
 	return (count);
 }
 
-char	*mword(char const *s, char c, int len)
-{
-	int		i;
-	int		j;
-	char	buffer[16384];
-
-	i = 0;
-	while (i < len)
-	{
-		while (i < len)
-		{
-			if (s[i] == c)
-				break ;
-			i++;
-		}
-		j = 0;
-		while (i < len)
-		{
-			if (s[i] != c)
-				break ;
-			buffer[j] = s[i];
-			i++;
-			j++;
-		}
-	}
-	buffer[i] = i;
-	return (buffer);
-}
-
 char	**ft_split(char const *s, char c)
 {
-	int		len;
-	int		i;
-	int		nwords;
-	char	**res;
+	size_t	i;
+	size_t	j;
+	int		index;
+	char	**split;
 
-	len = ft_strlen(s);
-	nwords = countWords(s, c, len);
-	while (i != nwords)
+	split = malloc((countwords(s, c) + 1) * sizeof(char *));
+	if (!s || !split)
+		return (0);
+	i = 0;
+	j = 0;
+	index = -1;
+	while (i <= ft_strlen(s))
 	{
-		*res[i] = (char *)malloc(sizeof(char) * ft_strlen(mwords(s, c, len))
-				+ 1);
+		if (s[i] != c && index < 0)
+			index = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
+		{
+			split[j++] = ft_substr(s, index, i - index);
+			index = -1;
+		}
 		i++;
 	}
-	return (res);
+	split[j] = 0;
+	return (split);
 }
