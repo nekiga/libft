@@ -1,44 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 16:44:45 by garibeir          #+#    #+#             */
-/*   Updated: 2022/11/14 14:07:55 by garibeir         ###   ########.fr       */
+/*   Created: 2022/11/14 13:32:12 by garibeir          #+#    #+#             */
+/*   Updated: 2022/11/14 13:38:06 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int		i;
-	char	*ps;
+	t_list	*first;
+	t_list	*new_list;
 
-	ps = (char *)s;
-	i = 0;
-	while (i <= (int)ft_strlen(ps))
+	if (!lst)
+		return (NULL);
+	first = NULL;
+	while (lst)
 	{
-		if (ps[i] == (char)c)
-			return (&ps[i]);
-		i++;
+		new_list = ft_lstnew(f(lst->content));
+		if (!new_list)
+		{
+			ft_lstclear(&first, del);
+			return (0);
+		}
+		ft_lstadd_back(&first, new_list);
+		lst = lst->next;
 	}
-	return (0);
+	return (first);
 }
-
-/*
-int main(void)
-{
-	char *s = "Hello";
-	int c = 108;
-
-	char *p1 = ft_strchr(s, c);
-	char *p2 = strchr(s, c);
-	
-	printf("Mine: %p\n", p1);
-	printf("Actual: %p\n", p2);
-
-}
-*/

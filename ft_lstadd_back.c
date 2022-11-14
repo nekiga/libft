@@ -1,44 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: garibeir < garibeir@student.42lisboa.com > +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 16:44:45 by garibeir          #+#    #+#             */
-/*   Updated: 2022/11/14 14:07:55 by garibeir         ###   ########.fr       */
+/*   Created: 2022/11/14 13:06:18 by garibeir          #+#    #+#             */
+/*   Updated: 2022/11/14 14:28:25 by garibeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int		i;
-	char	*ps;
+	t_list	*lastl;
 
-	ps = (char *)s;
-	i = 0;
-	while (i <= (int)ft_strlen(ps))
+	if (!*lst)
 	{
-		if (ps[i] == (char)c)
-			return (&ps[i]);
-		i++;
+		*lst = new;
+		return ;
 	}
-	return (0);
+	lastl = ft_lstlast(*lst);
+	lastl->next = new;
 }
-
-/*
-int main(void)
-{
-	char *s = "Hello";
-	int c = 108;
-
-	char *p1 = ft_strchr(s, c);
-	char *p2 = strchr(s, c);
-	
-	printf("Mine: %p\n", p1);
-	printf("Actual: %p\n", p2);
-
-}
-*/
